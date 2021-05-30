@@ -8,10 +8,6 @@ export default class Posts extends BaseSchema {
       table.increments('id')
       table.string('title')
       table.text('description', 'longtext')
-
-      /**
-       * Uses timestampz for PostgreSQL and DATETIME2 for MSSQL
-       */
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
